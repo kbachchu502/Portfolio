@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bachchu Kumar — Graphic Designer & Video Editor</title>
+<meta name="description" content="Portfolio of Bachchu Kumar, Graphic Designer and Video Editor. Branding, YouTube thumbnails and promotional creatives.">
+<style>
+:root {
+  --bg:#0b110d; --surface:#121a14; --surface2:#182219; --text:#f3f5ed;
+  --muted:#a9b4a3; --accent:#baff32; --accent2:#e2ff9a; --line:#2b382b;
+  --max:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 80% 0%,#20351c 0,transparent 34%),var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(11,17,13,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{font-weight:900;letter-spacing:-.04em;font-size:1.25rem}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:26px;color:var(--muted);font-size:.92rem}
+.nav-links a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;font-weight:800;border:1px solid var(--accent);background:var(--accent);color:#10150d;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(186,255,50,.15)}
+.btn.alt{background:transparent;color:var(--text);border-color:var(--line)}
+.hero{padding:100px 0 80px;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.eyebrow{color:var(--accent);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800}
+h1{font-size:clamp(3rem,7vw,6.7rem);line-height:.98;letter-spacing:-.075em;margin:18px 0 24px}
+h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:1.12rem;color:var(--muted);max-width:650px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero-art{
+    position:relative;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+.hero-art img{
+    width:350px;
+    height:350px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid #CDFA4E;
+    display:block;
+}
+.badge{position:absolute;bottom:-18px;left:-18px;background:var(--accent);color:#10150d;border-radius:18px;padding:14px 18px;font-weight:900;box-shadow:0 15px 35px rgba(0,0,0,.3)}
+section{padding:92px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}
+.section-head h2{font-size:clamp(2rem,4vw,3.5rem);line-height:1;letter-spacing:-.06em;margin:10px 0 0}
+.section-head p{max-width:520px;color:var(--muted);margin:0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.panel{background:linear-gradient(145deg,var(--surface),#0e1510);border:1px solid var(--line);border-radius:26px;padding:32px}
+.panel p{color:var(--muted)}
+.skill-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.skill{padding:14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025);font-weight:700;font-size:.92rem}
+.skill::before{content:"✦";color:var(--accent);margin-right:9px}
+.filters{display:flex;gap:10px;flex-wrap:wrap}
+.filter{cursor:pointer;background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:9px 15px}
+.filter.active,.filter:hover{background:var(--accent);border-color:var(--accent);color:#10150d;font-weight:800}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.project-card{background:var(--surface);border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:.25s}
+.project-card:hover{transform:translateY(-6px);border-color:#607a55}
+.project-image{aspect-ratio:4/3;background:#202820;overflow:hidden}
+.project-image img{width:100%;height:100%;object-fit:cover;display:block;transition:.35s}
+.project-card:hover img{transform:scale(1.035)}
+.project-info{padding:20px}
+.tag{color:var(--accent);font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:900}
+.project-info h3{margin:8px 0;font-size:1.25rem;letter-spacing:-.03em}
+.project-info p{color:var(--muted);font-size:.92rem;margin:0}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.contact-card{background:var(--accent);color:#10150d;border-radius:28px;padding:38px}
+.contact-card h2{font-size:clamp(2.2rem,4vw,4rem);line-height:1;letter-spacing:-.06em;margin:0 0 18px}
+.contact-card p{font-weight:650;max-width:470px}
+.contact-details{display:grid;gap:14px}
+.detail{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.detail small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:.7rem}
+.detail a,.detail strong{display:block;margin-top:5px;font-size:1.05rem}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem;display:flex;justify-content:space-between;gap:20px}
+@media(max-width:850px){
+ .nav-links{display:none} .hero,.about-grid,.contact{grid-template-columns:1fr} .hero{padding-top:60px} .projects{grid-template-columns:1fr 1fr} .section-head{align-items:start;flex-direction:column}
+}
+@media(max-width:540px){.projects{grid-template-columns:1fr} .skill-list{grid-template-columns:1fr} h1{font-size:3.5rem}}
+</style>
+</head>
+<body>
+<nav><div class="container nav-inner">
+  <a class="logo" href="#home">Bachchu<span>.</span></a>
+  <div class="nav-links"><a href="#about">About</a><a href="#work">Work</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+  <a class="btn" href="#contact">Let's work</a>
+</div></nav>
+
+<main>
+<section class="hero container" id="home">
+  <div>
+    <div class="eyebrow">Graphic Designer & Video Editor</div>
+    <h1>Bachchu Kumar</h1> 
+    <h2 style="color: #CDFA4E;">Graphic Designer & 
+Video Editor</h2>
+    <p>Brand visuals, YouTube thumbnails aur promotional design jo dhyaan kheenchte hain — clean layout, bold color aur clear message ke saath.</p>
+    
+    <div class="actions"><a class="btn" href="#work">View selected work ↓</a><a class="btn alt" href="#contact">Get in touch</a></div>
+  </div>
+  <div class="hero-art">
+    <img src="D:\vs code\portfolio\1759156909203.jpg - Copy.jpeg" alt="Bachchu Kumar">
+</div>
+  </section>
+
+<section id="about"><div class="container">
+  <div class="section-head"><div><div class="eyebrow">01 — About</div><h2>Design with purpose.</h2></div><p>Har project mein focus sirf achha dikhne par nahi, balki message ko clearly communicate karne par hai.</p></div>
+  <div class="about-grid">
+    <div class="panel"><p>Main ek graphic designer aur video editor hoon, branding, YouTube thumbnails aur promotional creatives mein specialize karta hoon.</p><p>Process simple hai: pehle content aur audience samajhna, phir strong visual hierarchy aur consistent brand colors ke through memorable design banana.</p></div>
+    <div class="panel" id="services"><div class="eyebrow">What I do</div><div class="skill-list"><div class="skill">Photoshop Editing / Compositing</div><div class="skill">Canva Quick Layouts</div><div class="skill">Branding Identity Design</div><div class="skill">YouTube / Social Thumbnails</div><div class="skill">Promotional Creatives</div><div class="skill">Video Editing</div></div></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="container">
+  <div class="section-head"><div><div class="eyebrow">02 — Selected Work</div><h2>Recent creative projects.</h2></div><div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="Branding">Branding</button><button class="filter" data-filter="YouTube Thumbnail">Thumbnails</button><button class="filter" data-filter="Self Promotion">Promotion</button></div></div>
+  <div class="projects">
+      <article class="project-card" data-category="Branding">
+        <div class="project-image">
+    <img src="D:\vs code\portfolio\CARD 3 FINAL copy.png"
+         alt="Business Card Design"
+         onclick="showImage(this.src)"
+         style="cursor:pointer;">
+</div>
+        <div class="project-info">
+          <span class="tag">Branding</span>
+          <h3>Bachchu Graphic — Business Card</h3>
+          <p>Warm gold and dark navy visiting card with a bold monogram, clear contact hierarchy and QR code.</p>
+        </div>
+      </article>
+    
+      <article class="project-card" data-category="Self Branding">
+       <div class="project-image">
+    <img src="D:\vs code\portfolio\portofolio page 1.png"
+         alt="Business Card Design"
+         onclick="showImage(this.src)"
+         style="cursor:pointer;">
+</div>
+<div class="project-info">
+          <span class="tag">Self Branding</span>
+          <h3>Personal Intro Banner</h3>
+          <p>A dark studio-style introduction banner with profile image, tagline and creative software icons.</p>
+        </div>
+      </article>
+    
+      <article class="project-card" data-category="YouTube Thumbnail">
+        <div class="project-image">
+    <img src="D:\vs code\portfolio\file_00000000f5b0720788a5116277e114c2.png"
+         alt="Business Card Design"
+         onclick="showImage(this.src)"
+         style="cursor:pointer;">
+</div>
+<div class="project-info">
+          <span class="tag">YouTube Thumbnail</span>
+          <h3>BSSC Exam Prep Thumbnail</h3>
+          <p>High-contrast exam-prep creative with bold headline, official emblem and a quick-glance study plan.</p>
+        </div>
+      </article>
+    
+      <article class="project-card" data-category="YouTube Thumbnail">
+       <div class="project-image">
+    <img src="D:\vs code\portfolio\free-ai-tools.png"
+         alt="Business Card Design"
+         onclick="showImage(this.src)"
+         style="cursor:pointer;">
+</div>
+ <div class="project-info">
+          <span class="tag">YouTube Thumbnail</span>
+          <h3>3 Free AI Tools</h3>
+          <p>Energetic tech thumbnail with neon blue treatment, reaction visual and tool logos.</p>
+        </div>
+      </article>
+    
+      <article class="project-card" data-category="YouTube Thumbnail">
+       <div class="project-image">
+    <img src="D:\vs code\portfolio\12-VI.png"
+         alt="Business Card Design"
+         onclick="showImage(this.src)"
+         style="cursor:pointer;">
+</div>
+<div class="project-info">
+          <span class="tag">YouTube Thumbnail</span>
+          <h3>Computer Courses Guide</h3>
+          <p>Career-guidance thumbnail designed for students with strong yellow-red typography and a clear message.</p>
+        </div>
+      </article>
+    
+      <article class="project-card" data-category="Self Promotion">
+       <div class="project-image">
+    <img src="D:\vs code\portfolio\BACHCHU-PORTOFOLIYO.png"
+         alt="Business Card Design"
+         onclick="showImage(this.src)"
+         style="cursor:pointer;">
+</div>
+<div class="project-info">
+          <span class="tag">Self Promotion</span>
+          <h3>Thumbnail Designer Services Poster</h3>
+          <p>A service poster combining tools, offerings and sample projects in an easy-to-scan layout.</p>
+        </div>
+      </article>
+    </div>
+</div></section>
+
+<section id="contact">
+    <div class="container">
+
+        <div class="section-head">
+            <div>
+                <div class="eyebrow">03 — CONTACT</div>
+                <h2>Let's work together.</h2>
+            </div>
+            <p>Apne project ya design work ke liye mujhse contact karein.</p>
+        </div>
+
+        <div class="contact">
+
+            <div class="contact-card">
+
+                <h2>Contact Now</h2>
+
+                <p>
+                    Graphic Design, YouTube Thumbnail, Branding aur Video Editing
+                    services ke liye Bachchu Kumar se contact karein.
+                </p>
+
+                <div class="contact-buttons">
+
+                    <a href="https://wa.me/919508400839" target="_blank" class="btn">
+                        WhatsApp Now →
+                    </a>
+
+                    <a href="mailto:bachchukumar020@gmail.com" class="btn">
+                        Send Email →
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="contact-details">
+
+                <div class="detail">
+                    <small>WHATSAPP</small>
+                    <a href="https://wa.me/919508400839" target="_blank">
+                        +91 9508400839
+                    </a>
+                </div>
+
+                <div class="detail">
+                    <small>EMAIL</small>
+                    <a href="mailto:bachchukumar020@gmail.com">
+                        bachchukumar020@gmail.com
+                    </a>
+                </div>
+
+                <div class="detail">
+                    <small>LOCATION</small>
+                    <strong>India</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+</main>
+<footer class="container"><span>© 2026 Bachchu Kumar</span><span>Graphic Designer & Video Editor</span></footer>
+
+<script>
+const buttons = document.querySelectorAll('.filter');
+const cards = document.querySelectorAll('.project-card');
+buttons.forEach(btn => btn.addEventListener('click', () => {
+  buttons.forEach(b => b.classList.remove('active')); btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  cards.forEach(card => card.style.display = filter === 'all' || card.dataset.category === filter ? '' : 'none');
+}));
+</script>
+<div id="previewBox"
+     style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center;"
+     onclick="this.style.display='none'">
+
+    <span style="position:absolute; top:20px; right:35px; color:white; font-size:40px; cursor:pointer;">&times;</span>
+
+    <img id="previewImg"
+         style="max-width:90%; max-height:90%; object-fit:contain;">
+</div>
+
+<script>
+function showImage(src) {
+    document.getElementById("previewImg").src = src;
+    document.getElementById("previewBox").style.display = "flex";
+}
+</script>
+</body>
+</html>
